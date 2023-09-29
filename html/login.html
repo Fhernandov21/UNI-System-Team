@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body id="bodyLogin">
+    <h1>Nombre Sistema</h1>
+    <div class="contenedorForm">
+        <div class="imgCentrada"><img src="../resources/LogoCNU.png" alt="imgCentrada"></div>
+        <h2>Inicio de Sesión</h2>
+        <form action="../php/su_archivo2.php" method="post">
+            <div class="Inputs">
+                <div class="InputGroup">
+                    <label for="usuario">Usuario</label>
+                    <input type="text" id="usuario" name="usuario" required placeholder="Ingrese su usuario">
+                </div>
+                <div class="InputGroup">
+                    <label for="pass">Contraseña</label>
+                    <input type="password" id="pass" name="pass" required required placeholder="Ingrese su contraseña">
+                </div>
+                <div class="InputGroup" id="botoncito">
+                    <button type="submit">Iniciar Sesión</button>
+                </div>
+            </div>
+           
+        </form>
+        <p id="labelCentrada"><a href="resetPass.html">¿Olvidó su contraseña?</a></p>
+    </div>
+
+</body>
+<footer>
+    <div class="imgCentrada"><img src="../resources/LogoCNU.png" alt="imgCentrada"></div>
+    <div class="redes">
+        <a  href=""><i class="fab fa-facebook fa-2x icono"></i></a>
+        <a  href=""><i class="fab fa-youtube fa-2x icono"></i></a>
+        <a  href=""><i class="fab fa-tiktok fa-2x icono"></i></a>
+        <a  href=""><i class="fab fa-instagram fa-2x icono"></i></a>
+    </div>
+</footer>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar Usuarios</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="tableTop">
+        Administrar<b> Usuarios<b>
+    </div>
+    <button class="btnCRUD" id="btnNuevo">Crear Usuario</button>
+    <button class="btnCRUD" id="btnEstado">Desactivar usuario</button>
+    
+    <section class="modal" id="formModal">
+        <div class="contenedorModal">
+            <h1>Crear usuario</h1>
+            <div class="Inputs">
+                <div class="InputGroup">
+                    <label for="usuario">Usuario</label>
+                    <input type="text" id="usuario" name="usuario" required placeholder="Ingrese el nombre de usuario">
+                </div>
+                <div class="InputGroup">
+                    <label for="email">Correo</label>
+                    <input type="email" id="email" name="email" required placeholder="Ingrese su correo">
+                </div>
+                <div class="InputGroup">
+                    <label for="pass">Contraseña</label>
+                    <input type="password" id="pass" name="pass" required placeholder="Ingrese la contraseña">
+                </div>
+                <div class="InputGroup">
+                    <label for="pass">Confirmar contraseña</label>
+                    <input type="password" id="passcon" name="passcon"   required placeholder="Confirmar la contraseña">
+                </div>
+                <div class="InputGroup" id="botoncitos">
+                    <button type="reset" id="btnCancelar">Cancelar</button>
+                    <button type="submit" id="btnAceptar">Iniciar Sesión</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="modal" id="desactivarModal">
+        <div class="contenedorModal">
+            <h1>¿Esta seguro de desactivar al usuario </h1>
+            <div class="Inputs">
+                <div class="InputGroup" id="botoncitos">
+                    <button id="btnCancelarDesactivar">Cancelar</button>
+                    <button id="btnConfirmarDesactivar">Desactivar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="contenedorTabla">
+        <table>
+            <thead>
+                <th>Usuario</th>
+                <th>Correo</th>
+                <th>Evaluador</th>
+                <th>Fecha creación</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </thead>
+            <tr>
+                <td>Fher</td><td>correo@dominio.com</td><td>Fhernando</td><td>24/09/2023</td><td>Activo</td><td>[iconos_acciones]</td>
+            </tr>
+            <tr>
+                <td>Fher</td><td>correo@dominio.com</td><td>Fhernando</td><td>24/09/2023</td><td>Activo</td><td>[iconos_acciones]</td>
+            </tr>
+            <tr>
+                <td>Fher</td><td>correo@dominio.com</td><td>Fhernando</td><td>24/09/2023</td><td>Activo</td><td>[iconos_acciones]</td>
+            </tr>
+        </table>
+    </div>
+    
+    <script src="../js/scriptAdmUsuarios.js"></script>
+</body>
+</html>
