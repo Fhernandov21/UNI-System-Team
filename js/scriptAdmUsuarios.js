@@ -14,21 +14,23 @@ function añadirBotones(index){
     const tbody = table.querySelector('tbody');
     const rows = tbody.querySelectorAll('tr');
     let rowCounter = 0;
-    const editarIcon = document.createElement('i');
-    const desactivarIcon = document.createElement('i');
 
-    editarIcon.className= 'bx bx-edit-alt';
-    desactivarIcon.className= 'bx bxs-user-x';
+
+
 
     rows.forEach(row => {
         const cells = row.querySelectorAll('td');
         const td = cells[index];
 
-        const  btnDesactivar = document.createElement('button');
+        const btnDesactivar = document.createElement('button');
         const btnEditar = document.createElement('button');
 
+        let editarIcon = document.createElement('i');
+        let desactivarIcon = document.createElement('i');
+        editarIcon.className= 'bx bx-edit-alt';
+        desactivarIcon.className= 'bx bxs-user-x';
 
-    
+
         btnDesactivar.className = 'btnCelda';
         btnEditar.className = 'btnCelda';
 
@@ -40,11 +42,28 @@ function añadirBotones(index){
             desactivarModal.style.display = 'flex';
         });
 
-        btnDesactivar.appendChild(desactivarIcon);
-        btnEditar.appendChild(editarIcon);
-        
+        btnEditar.addEventListener('click', (e) =>{
+            e.preventDefault();
+            formModal.style.display = 'flex';
+
+            const usuario = row.cells[0].textContent;
+            const correo = row.cells[1].textContent;
+
+            const txtUser = formModal.querySelector('#usuario');
+            const txtEmail = formModal.querySelector('#correo');
+            const txtPass = formModal.querySelector('#contraseña');
+
+            
+            txtUser.value = usuario;
+            txtEmail.value = correo;
+
+        });
+
         td.appendChild(btnEditar);
         td.appendChild(btnDesactivar);
+
+        btnDesactivar.appendChild(desactivarIcon);
+        btnEditar.appendChild(editarIcon);
 
 
         rowCounter++;
