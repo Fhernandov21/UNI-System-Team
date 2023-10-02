@@ -51,7 +51,6 @@ function añadirBotones(index){
 
             const txtUser = formModal.querySelector('#usuario');
             const txtEmail = formModal.querySelector('#correo');
-            const txtPass = formModal.querySelector('#contraseña');
 
             
             txtUser.value = usuario;
