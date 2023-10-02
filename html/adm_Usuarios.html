@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrar Usuarios</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -21,8 +22,8 @@
         <div class="Usuario">
             <img src="../resources/default_userpfp.png" alt="default_userpfp" class="userFoto">
             <div>
-                <p><b>Nombre_Usuario</b></p>
-                <p><b>Cargo</b></p>
+                <p><b>Fhernando Villanueva</b></p>
+                <p>Líder evaluador</p>
             </div>
         </div>
         <p class="txtVertical"><i class='bx bxs-sushi'></i>SEDIUN</p>
@@ -72,7 +73,7 @@
                     </div>
                     <div class="InputGroup" id="botoncitos">
                         <button type="reset" id="btnCancelar">Cancelar</button>
-                        <button type="submit" id="btnAceptar">Iniciar Sesión</button>
+                        <button type="submit" id="btnAceptar">Crear Usuario</button>
                     </div>
                 </div>
             </div>
@@ -91,7 +92,7 @@
         </section>
     
         <div class="contenedorTabla">
-            <table>
+            <table id="tablaUsuarios">
                 <thead>
                     <th>Usuario</th>
                     <th>Correo</th>
@@ -100,15 +101,18 @@
                     <th>Estado</th>
                     <th>Acciones</th>
                 </thead>
-                <tr>
-                    <td>Fher</td><td>correo@dominio.com</td><td>Fhernando</td><td>24/09/2023</td><td>Activo</td><td>[iconos_acciones]</td>
-                </tr>
-                <tr>
-                    <td>Fher</td><td>correo@dominio.com</td><td>Fhernando</td><td>24/09/2023</td><td>Activo</td><td>[iconos_acciones]</td>
-                </tr>
-                <tr>
-                    <td>Fher</td><td>correo@dominio.com</td><td>Fhernando</td><td>24/09/2023</td><td>Activo</td><td>[iconos_acciones]</td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td>Fher</td><td>correo@dominio.com</td><td>Fhernando</td><td>24/09/2023</td><td>Activo</td><td class="btnCell"></td>
+                    </tr>
+                    <tr>
+                        <td>Fher</td><td>correo@dominio.com</td><td>Fhernando</td><td>24/09/2023</td><td>Activo</td><td class="btnCell"></td>
+                    </tr>
+                    <tr>
+                        <td>Fher</td><td>correo@dominio.com</td><td>Fhernando</td><td>24/09/2023</td><td>Activo</td><td class="btnCell"></td>
+                    </tr>
+                </tbody>
+                
             </table>
         </div>
     </div>
@@ -118,4 +122,24 @@
     <script src="../js/scriptAdmUsuarios.js"></script>
     <script src="../js/menu.js"></script>
 </body>
+<footer>
+
+    <div>
+        <h1>Nosotros</h1>
+        <p>
+            El CNU es el rector del Subsistema de Educación Superior. 
+            Fue creado el 05 de abril de 1990, a través de la ley de Autonomía
+             de las Instituciones de Educación Superior.
+        </p>
+    </div>
+
+    <div class="imgCentrada"><img src="../resources/LogoCNU.png" alt="imgCentrada"></div>
+    
+    <div class="redes">
+        <a  href=""><i class="fab fa-facebook fa-2x icono"></i></a>
+        <a  href=""><i class="fab fa-youtube fa-2x icono"></i></a>
+        <a  href=""><i class="fab fa-tiktok fa-2x icono"></i></a>
+        <a  href=""><i class="fab fa-instagram fa-2x icono"></i></a>
+    </div>
+</footer>
 </html>
