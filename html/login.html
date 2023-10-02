@@ -9,36 +9,52 @@
 </head>
 <body id="bodyLogin">
     <h1>SEDIUN</h1>
-    <div class="contenedorForm">
-        <div class="imgCentrada"><img src="../resources/LogoCNU.png" alt="imgCentrada"></div>
-        <h2>Inicio de Sesión</h2>
-        <form action="../php/su_archivo2.php" method="post">
-            <div class="Inputs">
-                <div class="InputGroup">
-                    <label for="usuario">Usuario</label>
-                    <input type="text" id="usuario" name="usuario" required placeholder="Ingrese su usuario">
+    <div id="contenedorLogin">
+        <div class="sombreadoFondo">     
+        </div>
+        <div class="contenedorForm">
+            <div class="imgCentrada"><img src="../resources/LogoCNU.png" alt="imgCentrada"></div>
+            <form action="../php/su_archivo2.php" method="post">
+                <div class="Inputs">
+                    <h2>Inicio de Sesión</h2>
+                    <div class="InputGroup">
+                        <label for="usuario">Usuario</label>
+                        <input type="text" id="usuario" name="usuario" required placeholder="Ingrese su usuario">
+                    </div>
+                    <div class="InputGroup">
+                        <label for="pass">Contraseña</label>
+                        <input type="password" id="pass" name="pass" required required placeholder="Ingrese su contraseña">
+                    </div>
+                    <div class="InputGroup" id="botoncitos">
+                        <button type="submit">Iniciar Sesión</button>
+                    </div>
                 </div>
-                <div class="InputGroup">
-                    <label for="pass">Contraseña</label>
-                    <input type="password" id="pass" name="pass" required required placeholder="Ingrese su contraseña">
-                </div>
-                <div class="InputGroup" id="botoncitos">
-                    <button type="submit">Iniciar Sesión</button>
-                </div>
-            </div>
-           
-        </form>
-        <p id="labelCentrada"><a href="resetPass.html">¿Olvidó su contraseña?</a></p>
+               
+            </form>
+            <p id="labelCentrada"><a href="resetPass.html">¿Olvidó su contraseña?</a></p>
+        </div>
     </div>
+    
+    <footer>
 
+        <div>
+            <h1>Nosotros</h1>
+            <p>
+                El CNU es el rector del Subsistema de Educación Superior. 
+                Fue creado el 05 de abril de 1990, a través de la ley de Autonomía
+                 de las Instituciones de Educación Superior.
+            </p>
+        </div>
+
+        <div class="imgCentrada"><img src="../resources/LogoCNU.png" alt="imgCentrada"></div>
+        
+        <div class="redes">
+            <a  href=""><i class="fab fa-facebook fa-2x icono"></i></a>
+            <a  href=""><i class="fab fa-youtube fa-2x icono"></i></a>
+            <a  href=""><i class="fab fa-tiktok fa-2x icono"></i></a>
+            <a  href=""><i class="fab fa-instagram fa-2x icono"></i></a>
+        </div>
+    </footer>
 </body>
-<footer>
-    <div class="imgCentrada"><img src="../resources/LogoCNU.png" alt="imgCentrada"></div>
-    <div class="redes">
-        <a  href=""><i class="fab fa-facebook fa-2x icono"></i></a>
-        <a  href=""><i class="fab fa-youtube fa-2x icono"></i></a>
-        <a  href=""><i class="fab fa-tiktok fa-2x icono"></i></a>
-        <a  href=""><i class="fab fa-instagram fa-2x icono"></i></a>
-    </div>
-</footer>
+
 </html>
