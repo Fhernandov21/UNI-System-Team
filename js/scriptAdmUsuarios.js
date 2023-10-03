@@ -72,11 +72,16 @@ function añadirBotones(index){
 
 btnNuevo.addEventListener('click', (e) =>{
     e.preventDefault();
+    const txtUser = formModal.querySelector('#usuario');
+    const txtEmail = formModal.querySelector('#correo');
+    txtUser.value = "";
+    txtEmail.value = "";
     formModal.style.display = 'flex';
 });
 
 btnAceptar.addEventListener('click', (e) =>{
     e.preventDefault();
+    
     formModal.style.display = 'none';
 });
 
