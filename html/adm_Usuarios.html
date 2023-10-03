@@ -21,7 +21,7 @@
         </div>
         <div class="Usuario">
             <img src="../resources/default_userpfp.png" alt="default_userpfp" class="userFoto">
-            <div>
+            <div id="infoUser">
                 <p><b>Fhernando Villanueva</b></p>
                 <p>Líder evaluador</p>
             </div>
@@ -41,7 +41,7 @@
                 <i class="bx  bx-right-arrow"><a href="">Configuración</a></i>
             </li>
             <li>
-                <i class="bx  bx-right-arrow"><a href="">Cerrar sesión</a></i>
+                <i class="bx  bx-right-arrow"><a id="a_logout">Cerrar sesión</a></i>
             </li>
         </ul>
     </div>
@@ -60,25 +60,36 @@
                         <input type="text" id="usuario" name="usuario" required placeholder="Ingrese el nombre de usuario">
                     </div>
                     <div class="InputGroup">
-                        <label for="email">Correo</label>
+                        <label for="correo">Correo</label>
                         <input type="email" id="correo" name="correo" required placeholder="Ingrese su correo">
                     </div>
                     <div class="InputGroup">
-                        <label for="pass">Contraseña</label>
+                        <label for="contraseña">Contraseña</label>
                         <input type="password" id="contraseña" name="pass" required placeholder="Ingrese la contraseña">
                     </div>
                     <div class="InputGroup">
-                        <label for="pass">Confirmar contraseña</label>
+                        <label for="passcon">Confirmar contraseña</label>
                         <input type="password" id="passcon" name="passcon"   required placeholder="Confirmar la contraseña">
                     </div>
                     <div class="InputGroup" id="botoncitos">
                         <button type="reset" id="btnCancelar">Cancelar</button>
-                        <button type="submit" id="btnAceptar">Crear Usuario</button>
+                        <button type="submit" name="submit" id="btnAceptar">Crear Usuario</button>
                     </div>
                 </div>
             </div>
         </section>
-    
+        
+        <div class = "modal" id="dialogLogout">
+            <div class="contenedorModal">
+                <h1>¿Seguro que quiere cerrar sesión?</h1>
+                <div class="InputGroup" id="botoncitos">
+                    <button type="reset" id="btnCancelLogout">Cancelar</button>
+                    <button type="submit" name="submit" id="btnLogout">Cerrar sesión</button>
+                </div>
+            </div>
+            
+        </div>
+
         <section class="modal" id="desactivarModal">
             <div class="contenedorModal">
                 <h1>¿Esta seguro de desactivar al usuario </h1>
@@ -115,6 +126,26 @@
                 
             </table>
         </div>
+        <footer>
+
+            <div>
+                <h1>Nosotros</h1>
+                <p>
+                    El CNU es el rector del Subsistema de Educación Superior. 
+                    Fue creado el 05 de abril de 1990, a través de la ley de Autonomía
+                     de las Instituciones de Educación Superior.
+                </p>
+            </div>
+        
+            <div class="imgCentrada"><img src="../resources/LogoCNU.png" alt="imgCentrada"></div>
+            
+            <div class="redes">
+                <a  href=""><i class="fab fa-facebook fa-2x icono"></i></a>
+                <a  href=""><i class="fab fa-youtube fa-2x icono"></i></a>
+                <a  href=""><i class="fab fa-tiktok fa-2x icono"></i></a>
+                <a  href=""><i class="fab fa-instagram fa-2x icono"></i></a>
+            </div>
+        </footer>
     </div>
 
     
@@ -122,24 +153,5 @@
     <script src="../js/scriptAdmUsuarios.js"></script>
     <script src="../js/menu.js"></script>
 </body>
-<footer>
 
-    <div>
-        <h1>Nosotros</h1>
-        <p>
-            El CNU es el rector del Subsistema de Educación Superior. 
-            Fue creado el 05 de abril de 1990, a través de la ley de Autonomía
-             de las Instituciones de Educación Superior.
-        </p>
-    </div>
-
-    <div class="imgCentrada"><img src="../resources/LogoCNU.png" alt="imgCentrada"></div>
-    
-    <div class="redes">
-        <a  href=""><i class="fab fa-facebook fa-2x icono"></i></a>
-        <a  href=""><i class="fab fa-youtube fa-2x icono"></i></a>
-        <a  href=""><i class="fab fa-tiktok fa-2x icono"></i></a>
-        <a  href=""><i class="fab fa-instagram fa-2x icono"></i></a>
-    </div>
-</footer>
 </html>

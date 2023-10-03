@@ -19,12 +19,37 @@ a{
     color: var(--colorPrimario)
 }
 
+.sideMenu.active #infoUser{
+    display:block
+}
+
+.sideMenu #infoUser{
+    display: none;
+}
+
+.sideMenu .Usuario{
+    padding: 30px 0;
+}
+
+.sideMenu.active .Usuario{
+    padding: 0;
+}
+
 h1{
     margin: 0;
     text-align: center;
     color: white;
     width: 100%;
     background-color: var(--colorPrimario);
+}
+
+#títuloCorto{
+    display:block;
+    font-size: 2rem;
+}
+#títuloLargo{
+    display:none;
+    font-size: 2rem;
 }
 
 #bodyLogin{
@@ -230,6 +255,7 @@ table{
     width: 90%;
     height: auto;
     overflow: auto;
+    margin-bottom: 350px;
 }
 
 table thead {
@@ -299,7 +325,8 @@ tbody tr:nth-child(odd){
 
 .contenedorModal h1{
     padding-top: 10px;
-    color: black;
+    color: white;
+    font-size: 1.8rem;
 }
 
 .txtVertical{
@@ -429,9 +456,10 @@ li{
 
 .sideMenu.active a:hover{
     background-color: #010f41;
+    cursor: pointer;
 }
 
-.Usuario {
+.Usuario{
     display: flex;
     align-items: center;
     margin-left: 4px;
@@ -478,6 +506,11 @@ li{
         margin: 0 50px;
     }
 
+    .imgCentrada{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
     footer{
         display: flex;
         padding: 5px;
@@ -496,3 +529,13 @@ li{
     }
 }
 
+
+@media only screen and (min-width: 1500px){
+    
+    #títuloCorto{
+        display:none;
+    }
+    #títuloLargo{
+        display:block;
+    }
+}

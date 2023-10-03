@@ -97,6 +97,25 @@ btnConfirmarDesactivar.addEventListener('click', (e) =>{
 });
 
 
+const dialogLogout = document.getElementById("dialogLogout")
+const btnLogout = document.getElementById("btnLogout");
+const btnCancelLogout = document.getElementById("btnCancelLogout");
+const a_logout = document.getElementById("a_logout");
+
+a_logout.addEventListener('click', (e)=>{
+    e.preventDefault();
+    dialogLogout.style.display = 'flex';
+})
+btnCancelLogout.addEventListener('click', (e)=>{
+    e.preventDefault();
+    dialogLogout.style.display = 'none';
+})
+btnLogout.addEventListener('click', (e)=>{
+    e.preventDefault();
+    window.location.href = "../html/Login.html";
+})
+
+
 window.onload = function(){
     añadirBotones(5);
 }
