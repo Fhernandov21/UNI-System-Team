@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Usuarios</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+
+    <div class="sideMenu">
+        <div class="topmenu">
+            <div class="logo">
+                <i class='bx bxs-sushi'></i>
+                <span>SEDIUN</span>
+            </div>
+            <i class="bx bx-menu" id=btnMenu></i>
+        </div>
+        <div class="Usuario">
+            <img src="../resources/default_userpfp.png" alt="default_userpfp" class="userFoto">
+            <div id="infoUser">
+                <p><b>Fhernando Villanueva</b></p>
+                <p>Líder evaluador</p>
+            </div>
+        </div>
+        <p class="txtVertical"><i class='bx bxs-sushi'></i>SEDIUN</p>
+        <ul id="menuItems">
+            <li>
+                <i class="bx  bx-right-arrow"><a href="">Evaluadores</a></i>
+            </li>
+            <li>
+                <i class="bx  bx-right-arrow"><a href="">Usuarios</a></i>
+            </li>
+            <li>
+                <i class="bx  bx-right-arrow"><a href="">Infraestructura de Universidad</a></i>
+            </li>
+            <li>
+                <i class="bx  bx-right-arrow"><a href="gestionar_Evaluaciones.html">Gestionar evaluaciones</a></i>
+            </li>
+            <li>
+                <i class="bx  bx-right-arrow"><a id="a_logout">Cerrar sesión</a></i>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mainContent">
+        <div class="tableTop">
+            Gestionar<b> Usuarios</b>
+        </div>
+        <button class="btnCRUD" id="btnNuevo">Crear Usuario</button>        
+        <section class="modal" id="formModal">
+            <div class="contenedorModal">
+                <h1>Crear usuario</h1>
+                <div class="Inputs">
+                    <div class="InputGroup">
+                        <label for="usuario">Usuario</label>
+                        <input type="text" id="usuario" name="usuario" required placeholder="Ingrese el nombre de usuario">
+                    </div>
+                    <div class="InputGroup">
+                        <label for="correo">Correo</label>
+                        <input type="email" id="correo" name="correo" required placeholder="Ingrese su correo">
+                    </div>
+                    <div class="InputGroup">
+                        <label for="contraseña">Contraseña</label>
+                        <input type="password" id="contraseña" name="pass" required placeholder="Ingrese la contraseña">
+                    </div>
+                    <div class="InputGroup">
+                        <label for="passcon">Confirmar contraseña</label>
+                        <input type="password" id="passcon" name="passcon"   required placeholder="Confirmar la contraseña">
+                    </div>
+                    <div class="InputGroup" id="botoncitos">
+                        <button type="reset" id="btnCancelar">Cancelar</button>
+                        <button type="submit" name="submit" id="btnAceptar">Crear Usuario</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class = "modal" id="dialogLogout">
+            <div class="contenedorModal">
+                <h1>¿Seguro que quiere cerrar sesión?</h1>
+                <div class="InputGroup" id="botoncitos">
+                    <button type="reset" id="btnCancelLogout">Cancelar</button>
+                    <button type="submit" name="submit" id="btnLogout">Cerrar sesión</button>
+                </div>
+            </div>
+            
+        </div>
+
+        <section class="modal" id="desactivarModal">
+            <div class="contenedorModal">
+                <h1>¿Esta seguro de desactivar al usuario </h1>
+                <div class="Inputs">
+                    <div class="InputGroup" id="botoncitos">
+                        <button id="btnCancelarDesactivar">Cancelar</button>
+                        <button id="btnConfirmarDesactivar">Desactivar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <div class="contenedorTabla">
+            <table id="tablaUsuarios">
+                <thead>
+                    <th>Usuario</th>
+                    <th>Correo</th>
+                    <th>Evaluador</th>
+                    <th>Fecha creación</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Fher</td><td>fhervilla21@dominio.com</td><td>Fhernando Villanueva</td><td>24/09/2023</td><td>Activo</td><td class="btnCell"></td>
+                    </tr>
+                    <tr>
+                        <td>Oscar</td><td>odanaglr@dominio.com</td><td>Oscar Aguilar</td><td>24/09/2023</td><td>Activo</td><td class="btnCell"></td>
+                    </tr>
+                    <tr>
+                        <td>Leonardo</td><td>leoduartejr@dominio.com</td><td>Leonardo Duarte</td><td>24/09/2023</td><td>Activo</td><td class="btnCell"></td>
+                    </tr>
+                </tbody>
+                
+            </table>
+        </div>
+        <footer>
+
+            <div>
+                <h1>Nosotros</h1>
+                <p>
+                    El CNU es el rector del Subsistema de Educación Superior. 
+                    Fue creado el 05 de abril de 1990, a través de la ley de Autonomía
+                     de las Instituciones de Educación Superior.
+                </p>
+            </div>
+        
+            <div class="imgCentrada"><img src="../resources/LogoCNU.png" alt="imgCentrada"></div>
+            
+            <div class="redes">
+                <a  href=""><i class="fab fa-facebook fa-2x icono"></i></a>
+                <a  href=""><i class="fab fa-youtube fa-2x icono"></i></a>
+                <a  href=""><i class="fab fa-tiktok fa-2x icono"></i></a>
+                <a  href=""><i class="fab fa-instagram fa-2x icono"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    
+    
+    <script src="../js/scriptAdmUsuarios.js"></script>
+    <script src="../js/menu.js"></script>
+</body>
+
+</html>

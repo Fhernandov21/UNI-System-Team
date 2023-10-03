@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrar Usuarios</title>
+    <title>Gestionar Evaluaciones</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -38,7 +38,7 @@
                 <i class="bx  bx-right-arrow"><a href="">Infraestructura de Universidad</a></i>
             </li>
             <li>
-                <i class="bx  bx-right-arrow"><a href="">Configuración</a></i>
+                <i class="bx  bx-right-arrow"><a href="">Gestionar evaluaciones</a></i>
             </li>
             <li>
                 <i class="bx  bx-right-arrow"><a id="a_logout">Cerrar sesión</a></i>
@@ -48,24 +48,43 @@
 
     <div class="mainContent">
         <div class="tableTop">
-            Administrar<b> Usuarios</b>
+            Gestionar<b> Evaluaciones</b>
         </div>
-        <button class="btnCRUD" id="btnNuevo">Crear Usuario</button>        
-        <section class="modal" id="formModal">
+        <button class="btnCRUD" id="btnNuevo">Crear Evaluación</button>   
+        <section class="modal" id="formModalAñadirTarea">
             <div class="contenedorModal">
-                <h1>Crear usuario</h1>
+                <h1>Añadir tarea evaluativa</h1>
                 <div class="Inputs">
                     <div class="InputGroup">
-                        <label for="usuario">Usuario</label>
-                        <input type="text" id="usuario" name="usuario" required placeholder="Ingrese el nombre de usuario">
+                        <label for="FechaInicio">Fecha Inicio</label>
+                        <input type="date" id="FechaInicio" name="FechaInicio" required>
                     </div>
                     <div class="InputGroup">
-                        <label for="correo">Correo</label>
-                        <input type="email" id="correo" name="correo" required placeholder="Ingrese su correo">
+                        <label for="Edificio">Edificio</label>
+                        <input type="select" id="Edificio" name="Edificio" required>
                     </div>
                     <div class="InputGroup">
-                        <label for="contraseña">Contraseña</label>
-                        <input type="password" id="contraseña" name="pass" required placeholder="Ingrese la contraseña">
+                        <label for="Evaluador">Evaluador</label>
+                        <input type="select" id="Evaluador" name="Evaluador" required>
+                    </div>
+                    <div class="InputGroup" id="botoncitos">
+                        <button type="reset" id="btnCancelar">Cancelar</button>
+                        <button type="submit" name="submit" id="btnAceptar">Crear Usuario</button>
+                    </div>
+                </div>
+            </div>
+        </section>     
+        <section class="modal" id="formModal">
+            <div class="contenedorModal">
+                <h1>Añadir tarea evaluativa</h1>
+                <div class="Inputs">
+                    <div class="InputGroup">
+                        <label for="FechaInicio">Fecha Inicio</label>
+                        <input type="date" id="FechaInicio" name="FechaInicio" required>
+                    </div>
+                    <div class="InputGroup">
+                        <label for="Recinto">Recinto Universitario</label>
+                        <input type="select" id="Recinto" name="Recinto" required>
                     </div>
                     <div class="InputGroup">
                         <label for="passcon">Confirmar contraseña</label>
