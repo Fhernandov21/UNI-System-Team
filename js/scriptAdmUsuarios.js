@@ -117,7 +117,7 @@ btnCancelLogout.addEventListener('click', (e)=>{
 })
 btnLogout.addEventListener('click', (e)=>{
     e.preventDefault();
-    window.location.href = "../html/Login.html";
+    window.location.href = "../html/login.html";
 })
 
 

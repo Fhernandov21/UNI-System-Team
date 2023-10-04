@@ -404,6 +404,7 @@ tbody tr:nth-child(odd){
 .sideMenu.active ~ .mainContent{
     left: 350px;
     width: calc(100% - 350px);
+    overflow: hidden;
 }
 
 .sideMenu.active{
@@ -487,7 +488,18 @@ li{
     background-color: #12559d59;
 }
 
+.dialogLogout{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+}
+#dialogLogout h1, #desactivarModal h1{
+    font-size: 1.3rem;
+}
 
+#desactivarModal b{
+    color: red;
+}
 
 @media only screen and (min-width: 570px){
 
