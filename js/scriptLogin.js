@@ -6,12 +6,9 @@ const form = document.getElementById("formLogin");
             const pass = document.getElementById("pass").value;
 
             if(usuario=="Fher" && pass=="123"){
-                window.location.href = "../html/adm_Usuarios.html";
+                window.location.href = "../html/gestionar_Usuarios.html";
             }
             else{
                 alert("Usuario no existente. Pista: Usuario -> Fher, Contraseña -> 123");
             } 
         });
-
-
-    
